@@ -3,7 +3,7 @@ import moleImg from '../mole.png'
 
 function Mole(props){
     useEffect(() => {
-        // Feel free to adjust this number as you see fit.
+        // here Feel free to adjust this number as you see fit.
         // It is your game to tune!
         let randSeconds = Math.ceil(Math.random() * 5000)
         let timer = setTimeout(() => {
