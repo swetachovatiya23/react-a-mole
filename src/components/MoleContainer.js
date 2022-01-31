@@ -3,21 +3,20 @@ import Mole from './Mole'
 import EmptySlot from './EmptySlot'
 
 const MoleContainer = (props) => {
-    let [Mole, setMole] = useState(false)
+    let [displayMole, setdisplayMole] = useState(false)
 
     const handleClick = (e) => {
         props.setScore(props.score + 1)
-        setMole(false)
+        setdisplayMole(false)
     }
 
-    let displayMole = Mole ? <Mole setScore={props.setScore} toggle={setMole} handleClick={handleClick} /> : <EmptySlot toggle={setMole} />
-
+    let displayMoles = displayMole ? <Mole setScore={props.setScore} toggle={setdisplayMole} handleClick={handleClick} /> : <EmptySlot toggle={setdisplayMole} />
+    
     return (
         <div style={{'display': 'inline-block', 'width': '30vw'}}>
-            {displayMole}
+            {displayMoles}
         </div>
     )
 }
-<Mole/>
 
-export default MoleContainer;
+export default MoleContainer
